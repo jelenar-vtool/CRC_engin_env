@@ -11,7 +11,7 @@ module top;
       
     bit clk, reset_n;
     
-    // 25MHz clock freq for timescale 1ns
+
     parameter CLK_CYCLE = 20; 
     localparam delay_reset = 105;
     string logfile = "dump.vcd";
@@ -38,7 +38,7 @@ module top;
         uvm_config_db#(virtual crc_if#(36,149,24))::set(null,"*", "crc_vif", crc_vif);
     end
     
-    // invoking simulation phases of all components
+
     initial begin
         run_test(""); 
     end
