@@ -66,7 +66,7 @@ function void crc_agent::connect_phase(uvm_phase phase);
 
   m_monitor.crc_vif = crc_vif; 
 
-a
+
   if (cfg.c_is_active == UVM_ACTIVE) begin 
     driver.cfg = cfg; 
     sequencer.cfg = cfg; 

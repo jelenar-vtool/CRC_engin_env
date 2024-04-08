@@ -2,16 +2,16 @@ class crc_env extends uvm_env;
 
     `uvm_component_param_utils(crc_env)
 
-    crcapb_env_cfg cfg_env;
+    crc_env_cfg cfg_env;
     crc_agent#(32,32) master_agent;//parametizacija
 
-    crc_sb sb; 
+    crc_scoreboard sb; 
    	crc_virtual_sequencer sequencer;
     extern function new (string name, uvm_component parent);
     extern virtual function void build_phase (uvm_phase phase);
     extern virtual function void connect_phase (uvm_phase phase);
     extern virtual function void print_cfg();
-endclass : apb_env
+endclass : crc_env
 
 function crc_env :: new (string name, uvm_component parent);
     super.new(name, parent);
@@ -31,7 +31,7 @@ function void crc_env:: build_phase (uvm_phase phase);
 
         
 
-    sb = crc_sb::type_id::create("sb",this);
+    sb = crc_scoreboard::type_id::create("sb",this);
     
 
 endfunction : build_phase 
@@ -42,10 +42,10 @@ function void crc_env:: connect_phase (uvm_phase phase);
 
     //connect monitor to scb !!!
     if (cfg_env.has_master_agent == 1) begin
-    master_agent.m_mon.apb_mon_analysis_port.connect(sb.m_mon_imp);
+    master_agent.m_mon.crc_mon_analysis_port.connect(sb.m_mon_imp);
     end
    /* if (cfg_env.has_slave_agent == 1) begin    
-    slave_agent.m_mon.apb_mon_analysis_port.connect(sb.s_mon_imp); 
+    slave_agent.m_mon.acrc_mon_analysis_port.connect(sb.s_mon_imp); 
     end*/
 
 endfunction : connect_phase

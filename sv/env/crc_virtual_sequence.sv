@@ -1,6 +1,6 @@
 class crc_virtual_sequence extends uvm_sequence #(uvm_sequence_item);
 
-    `uvm_object_utils(b2gfifo_virtual_sequence)
+    `uvm_object_utils(crc_virtual_sequence)
    `uvm_declare_p_sequencer(crc_virtual_sequencer)
 
    crc_master_sequence seq1;

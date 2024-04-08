@@ -12,7 +12,7 @@ class crc_master_sequence extends uvm_sequence #(crc_item);
 endclass // crc_master_sequence
 
 //-------------------------------------------------------------------
-function crc_master_sequence::new(string name = "b2gfifo_master_sequence");
+function crc_master_sequence::new(string name = "crc_master_sequence");
     super.new(name);
 endfunction //crc_master_sequence::new
 

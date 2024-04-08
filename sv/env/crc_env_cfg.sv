@@ -14,20 +14,20 @@ class crc_env_cfg extends uvm_object;
    `uvm_object_utils_end
 
 
-    extern function new(string name = "b2gfifo_env_cfg");
+    function new(string name = "crc_env_cfg");
+    	super.new(name);
+
+        cfg = crc_cfg::type_id::create ("cfg");
+
+    endfunction
     
 
-   function void set_default_config(); 
+  /* function void set_default_config(); 
 	cfg.set_default_config();
      ms_has_checks=0;
      ms_has_checks=1;
-   endfunction 
+   endfunction */
 endclass
 
 //-------------------------------------------------------------------------------------------------------------
-function crc_env_cfg::new(string name = "crc_env_cfg");
-    super.new(name);
 
-   cfg = crc_env_cfg::type_id::create ("cfg");
-
-endfunction
