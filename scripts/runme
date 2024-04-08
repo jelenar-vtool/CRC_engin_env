@@ -1,0 +1,115 @@
+#!/bin/bash
+
+gui=''
+seed=1
+verbosity="UVM_LOW"
+declare -i just_comp
+just_comp=0
+testdir="testdir"
+testfile="log.log"
+clean='0'
+filelist_path=$scripts/filelist.f
+
+while getopts ':t:s:g:c:v:o:l:q:i:f:d:' flag; do
+
+    case "${flag}" in
+        s) seed="${OPTARG}" ;;
+        t) testname="${OPTARG}" ;;
+        g) gui='-gui' ;;
+        c) just_comp=1
+           seed=1;;
+        v) verbosity="${OPTARG}" ;;
+		  q) quitcount="${OPTARG}" ;;
+        o) coverage='-covoverwrite -coverage all' ;;
+        l) linedebug='-linedebug' ;; 
+        f) filelist_path="${OPTARG}" ;;
+	d) rm -rf $work_area/log_dir
+           exit ;;
+        *) echo "Unexpected option ${flag}" ;;
+    esac
+done
+
+if [ ! -f "${filelist_path}" ] ; then
+    echo "Filelist ${filelist_path} not found.";
+    exit;
+fi
+
+cd $work_area
+if [ $just_comp == 0 ] ; then
+   if [ -n "$seed" ] && [ "$seed" -eq "$seed" ] 2>/dev/null; then
+     echo "Running test for seed: $seed"
+   else
+     if [ $seed == "random" ] ; then
+        seed=$(shuf -i 1-2147483647 -n1)
+	echo "Running test with random seed: $seed" 
+     else
+        seed=1
+        echo "Seed is not a number. Using default seed: $seed"
+     fi
+   fi
+   testdir="${testname}_${seed}"
+   testfile="${testname}_${seed}.log"
+fi
+if [ ! -d log_dir ]; then
+  mkdir log_dir
+fi
+
+cd log_dir;
+
+if [ ! -d "$testdir" ]; then
+  mkdir "$testdir"
+fi
+cd "$testdir"
+# Create file if it doesn't exist
+if [ ! -f "$testfile" ]; then
+  touch "$testfile"
+fi
+
+if [ `command -v xmroot` ] ; then 
+    command_prefix="xm";
+    sim_runner="xrun";
+    path2_xcelium=`xmroot`;
+    echo "Using Xcelium located in ${path2_xcelium}"
+elif [ `command -v ncroot` ] ; then 
+    command_prefix="nc";
+    sim_runner="irun";
+    path2_incisive=`ncroot`;
+    echo "Using Incisive located in ${path2_incisive}";
+else
+    echo "Path to the Cadence Simulator not set in PATH";
+fi
+
+
+run_n_exit=''
+if [ -z $gui ]; then
+    run_n_exit=" -run -exit"
+fi
+
+if [ $just_comp == 0 ] ; then
+echo "${sim_runner} -clean -timescale 1ns/1ns -64bit ${coverage} -sysv ${gui} -access +rwc -testname ${testname} -verbosity ${verbosity} ${linedebug} -seed ${seed} -quitcount ${quitcount}"
+    xrun\
+    -clean \
+    -64bit\
+    -timescale 1ns/1ns \
+    -sysv \
+    -access +rwc \
+    -uvmhome CDNS-1.2 \
+    -seed ${seed} \
+    ${coverage} \
+    ${gui} \
+    -l ${testname} \
+    -f ${filelist_path} \
+    +UVM_TESTNAME=$testname \
+	+UVM_VERBOSITY=${verbosity} \
+	+UVM_MAX_QUIT_COUNT=${quitcount}\
+	+define+IXCOM_1X\
+    ${linedebug} \
+    $run_n_exit > "$testfile";
+    # simvisdbutil -64bit -sst2 -overwrite dump.vcd;
+else
+cd $work_area/sv/tb;
+echo "${sim_runner} NO TEST -assert -64bit -sv -gui -access +rwc -linedebug -abvrecordcoverall -verbosity ${verbosity} ${linedebug} -seed ${seed} " 
+xrun top.sv -timescale 1ns/1ns -sysv -access +rwc -uvm -uvmhome CDNS-1.2 -seed ${seed} +UVM_VERBOSITY=${verbosity} -f $scripts/filelist.f;
+mv xrun.log log.log
+mv log.log ../../log_dir/testdir
+fi

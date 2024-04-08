@@ -1,0 +1,28 @@
+#!/usr/bin/tcsh -f
+
+set temp_str=`pwd | sed 's|\(/[a-zA-Z0-9/_]*lab[0-9][0-9]\).*|\1|'`
+set check_str=`echo ${temp_str} | sed 's|/[a-zA-Z0-9/_]*\(lab[0-9][0-9]\)|\1|'`
+
+if ( $check_str =~ lab[0-9][0-9] ) then
+    setenv work_area $temp_str
+    echo "Currently working in ${check_str}"
+else
+    setenv work_area `pwd`
+    echo "WARNING: setenv not called from a lab directory. Using current directory."
+endif
+
+if ( ! ${?labs_home} ) then
+    setenv labs_home $work_area
+else if ( ! -d ${labs_home}) then
+    setenv labs_home $work_area
+endif
+
+if ( ! ${?scripts} ) then
+    setenv scripts $work_area/scripts
+else if ( ! -d ${scripts}) then
+    setenv scripts $work_area/scripts
+endif
+
+echo labs_home = $labs_home
+echo work_area = $work_area
+echo scripts = $scripts
