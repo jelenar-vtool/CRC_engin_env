@@ -6,7 +6,7 @@ class crc_virtual_sequencer extends uvm_sequencer  #(uvm_sequence_item);
     
     vr_master_sequencer seqr1;
     vr_slave_sequencer seqr2;
-
+	apb_master_sequencer seqr3;
 
 
     function new(string name, uvm_component parent);

@@ -33,8 +33,11 @@ module top;
 	vr_if#(149)crc_param_req_t_vif (clk,reset_n); //req_procces out
 	vr_if#(8)crc_param_rsp_t_vif (clk,reset_n); //input for demultiplexer
 	vr_if#(24)crc_rsp_t_vif (clk,reset_n); //FIFO rsp output
-		//treba apb da se instancira
+    apb_if#(10,32) apb_vif (clk,reset_n);
+
     crc_sequencer m_dut0 (.i_clk(crc_req_t_vif.clk), .i_nreset(crc_req_t_vif.reset_n),
+    .i_reg_apb_psel(apb_vif.psel), .i_reg_apb_penable(apb_vif.penable), .i_reg_apb_pwrite(apb_vif.pwrite),
+	.i_reg_apb_pwdata(apb_vif.pwdata), .i_reg_apb_paddr(apb_vif.paddr),.o_reg_apb_pready(apb_vif.pready), .o_reg_apb_prdata(apb_vif.prdata),
 	.i_crc_req_valid(crc_req_t_vif.valid), .i_crc_req_data(crc_req_t_vif.data), .o_crc_req_ready(crc_req_t_vif.ready),
  	.i_crc_done_ready(crc_param_req_t_vif.ready), .o_crc_done_data(crc_param_req_t_vif.data), .o_crc_done_valid(crc_param_req_t_vif.valid),
 	.i_crc_param_done_valid(crc_param_rsp_t_vif.valid), .i_crc_param_done_data(crc_param_rsp_t_vif.data), .o_crc_param_done_ready(crc_param_rsp_t_vif.ready),
@@ -46,6 +49,7 @@ module top;
         uvm_config_db#(virtual vr_if#(149))::set(null,"*", "crc_param_req_t_vif", crc_param_req_t_vif);
         uvm_config_db#(virtual vr_if#(8))::set(null,"*", "crc_param_rsp_t_vif", crc_param_rsp_t_vif);
         uvm_config_db#(virtual vr_if#(24))::set(null,"*", "crc_rsp_t_vif", crc_rsp_t_vif);
+        uvm_config_db#(virtual apb_if#(24))::set(null,"*", "apb_vif", apb_vif);
     end
     
 

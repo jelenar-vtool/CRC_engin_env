@@ -1,6 +1,6 @@
 
 class vr_agent#(parameter int DATA = 32) extends uvm_agent;
-    
+    //ovo trba da se obrise ovo ne sluzi nicemu 
     `uvm_component_utils(vr_agent#(DATA))
 
     virtual vr_if#(DATA) vr_vif;
