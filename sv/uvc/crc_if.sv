@@ -1,4 +1,4 @@
-
+//ova interefejs mi ne treba?????
 interface crc_if#(parameter CRC_REQ_WITDH = 36, parameter CRC_RSP_WITDH = 149, parameter CRC_PARAM_REQ_WITDH = 24)(input i_clk,input  i_nreset);
 	logic i_reg_apb_pse;
 	logic i_reg_apb_penable;

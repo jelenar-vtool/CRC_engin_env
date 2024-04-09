@@ -1,0 +1,3 @@
+xrun: *E,OPT2ND: option (-l) requires an argument.
+xrun: *E,OPTP2ND: The plus option (+UVM_TESTNAME) requires an argument.
+TOOL:	xrun(64)	22.03-s002: Exiting on Mar 27, 2024 at 10:29:52 UTC  (total: 00:00:00)

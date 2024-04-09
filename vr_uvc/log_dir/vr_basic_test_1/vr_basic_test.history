@@ -1,0 +1,1 @@
+s1(28Mar2024:09:22:02):  xrun -clean -64bit -timescale 1ns/1ns -sysv -access +rwc -uvmhome CDNS-1.2 -seed 1 -l vr_basic_test -f /space/users/jelenar/BGFFIFO/scripts/filelist1.f +UVM_TESTNAME=vr_basic_test +UVM_VERBOSITY=UVM_HIGH +UVM_MAX_QUIT_COUNT=1 +define+IXCOM_1X -run -exit 

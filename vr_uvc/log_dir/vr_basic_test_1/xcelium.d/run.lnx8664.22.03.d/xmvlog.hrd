@@ -1,0 +1,22 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-INCDIR
+/space/users/jelenar/BGFFIFO/uvc_template_generator/vr_uvc/uvc
+-INCDIR
+/space/users/jelenar/BGFFIFO/uvc_template_generator/vr_uvc
+-INCDIR
+/space/users/jelenar/BGFFIFO/uvc_template_generator/vr_uvc/env
+-INCDIR
+/space/users/jelenar/BGFFIFO/uvc_template_generator/vr_uvc/tests
+-INCDIR
+/space/users/jelenar/BGFFIFO/uvc_template_generator/vr_uvc/tb
+-DEFINE
+IXCOM_1X
+-I_INCDIR
+/tools/cdnc/xcelium/current/tools/methodology/UVM/CDNS-1.2/sv/src
+-DEFINE
+USE_PARAMETERIZED_WRAPPER
+-I_INCDIR
+/tools/cdnc/xcelium/current/tools/methodology/UVM/CDNS-1.2/additions/sv
