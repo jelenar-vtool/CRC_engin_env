@@ -64,7 +64,19 @@ endfunction : build_phase
 //------------------------------------------------------------------------------------------------------------ 
 function void crc_env:: connect_phase (uvm_phase phase);
     super.connect_phase(phase);
-	 //za sekvence da se poveze 
-      //za monitor da se poveze za skorbord da ima ono sa sfg= slave master agent 
+	 //connecting sequencers 
+		 sequencer.seqr1 = crc_req_agent.m_seqr;
+		 sequencer.seqr2 = crc_param_req_agent.s_seqr;
+		 sequencer.seqr1 = crc_param_rsp_agent.m_seqr;
+		 sequencer.seqr2 = crc_rsp_agent.s_seqr;
+    //connecting monitor to scb 
+    if (cfg_env.has_master_agent == 1) begin
+    crc_req_agent.m_mon.vr_mon_analysis_port.connect(scbd.m_mon_imp);
+    crc_param_rsp_agent.m_mon.vr_mon_analysis_port.connect(scbd.m_mon_imp);
+    end
+    if (cfg_env.has_slave_agent == 1) begin    
+    crc_param_req_agent.m_mon.vr_mon_analysis_port.connect(scbd.s_mon_imp); 
+    crc_rsp_agent.m_mon.vr_mon_analysis_port.connect(scbd.s_mon_imp); 
+    end
 		
 endfunction : connect_phase

@@ -1,0 +1,35 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-RUNMODE
+-INCDIR
+/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc
+-INCDIR
+/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc
+-INCDIR
+/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env
+-INCDIR
+/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/tests
+-INCDIR
+/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/tb
+-DEFINE
+IXCOM_1X
+-I_INCDIR
+/tools/cdnc/xcelium/current/tools/methodology/UVM/CDNS-1.2/sv/src
+-DEFINE
+USE_PARAMETERIZED_WRAPPER
+-I_INCDIR
+/tools/cdnc/xcelium/current/tools/methodology/UVM/CDNS-1.2/additions/sv
+-UPDATE
+-CDSLIB
+./xcelium.d/run.lnx8664.22.03.d/cdsrun.lib
+-HDLVAR
+./xcelium.d/run.lnx8664.22.03.d/hdlrun.var
+-work
+worklib
+-UVMNOSINGLESTEP
+-define
+UVM_PLI
+/tools/cdnc/xcelium/current/tools/methodology/UVM/CDNS-1.2/sv/src/uvm_pkg.sv
+/tools/cdnc/xcelium/current/tools/methodology/UVM/CDNS-1.2/additions/sv/cdns_uvm_pkg.sv

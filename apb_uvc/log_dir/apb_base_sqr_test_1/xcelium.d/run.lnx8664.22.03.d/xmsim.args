@@ -1,0 +1,45 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-INPUT
+"@source /tools/cdnc/xcelium/current/tools/methodology/UVM/CDNS-1.2/additions/sv/files/tcl/uvm_sim.tcl"
++UVM_VERBOSITY=UVM_HIGH
++UVM_MAX_QUIT_COUNT=1
++incdir+/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc
++incdir+/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc
++incdir+/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env
++incdir+/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/tests
++incdir+/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/tb
++define+IXCOM_1X
+-uvmhome
+/tools/cdnc/xcelium/current/tools/methodology/UVM/CDNS-1.2
+-sv_lib
+/tools/cdnc/xcelium/current/tools/methodology/UVM/CDNS-1.2/additions/sv/lib/64bit/libuvmpli.so
++UVM_TESTNAME=apb_base_sqr_test
+-RUN
+-EXIT
+-MESSAGES
+-svseed
+1
+-sndynseed
+1
+-RUN
+-SV_LIB
+/tools/cdnc/xcelium/current/tools/methodology/UVM/CDNS-1.2/additions/sv/lib/64bit/libuvmdpi.so
++EMGRLOG
+apb_base_sqr_test
+-XLSTIME
+1711622825
+-XLKEEP
+-XLMODE
+./xcelium.d/run.lnx8664.22.03.d
+-RUNMODE
+-CDSLIB
+./xcelium.d/run.lnx8664.22.03.d/cds.lib
+-HDLVAR
+./xcelium.d/run.lnx8664.22.03.d/hdl.var
+-XLNAME
+xrun
+-XLVERSION
+"TOOL:	xrun(64)	22.03-s002"

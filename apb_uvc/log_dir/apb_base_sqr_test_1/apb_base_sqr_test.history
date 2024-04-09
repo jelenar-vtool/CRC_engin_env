@@ -1,0 +1,2 @@
+s1(19Feb2024:10:49:48):  xrun -clean -64bit -timescale 1ns/1ns -sysv -access +rwc -uvmhome CDNS-1.2 -seed 1 -l apb_base_sqr_test -f /space/users/jelenar/BGFFIFO/scripts/filelist1.f +UVM_TESTNAME=apb_base_sqr_test +UVM_VERBOSITY=UVM_HIGH +UVM_MAX_QUIT_COUNT=1 +define+IXCOM_1X -run -exit 
+s2(28Mar2024:10:47:06):  xrun -clean -64bit -timescale 1ns/1ns -sysv -access +rwc -uvmhome CDNS-1.2 -seed 1 -l apb_base_sqr_test -f /space/users/jelenar/BGFFIFO/scripts/filelist1.f +UVM_TESTNAME=apb_base_sqr_test +UVM_VERBOSITY=UVM_HIGH +UVM_MAX_QUIT_COUNT=1 +define+IXCOM_1X -run -exit 

@@ -1,0 +1,8 @@
+IMC(64): 22.03-s001: (c) Copyright 1995-2022 Cadence Design Systems Inc - Simulator version: 22.03-s002 - Coverage engine version: 22.03-s002
+imc: *I,RUNLD: Successfully loaded run cov_work/scope/all/.
+Starting gui mode
+Adding recursive exclude to coverbin 'uvm_pkg/uvm_test_top/env/master_agent/m_mon/cov/r_cg/pslverr_value/on'
+Adding recursive exclude to coverbin 'apb_pkg/"apb_coverage#(32, 32)::w_cg"/pslverr_value/on'
+imc: *W,RELALL: Moving 'all' exclusion information to '/space/users/jelenar/verif_training/uvc_template_generator/apb_uvc/refine1.vRefine'.
+Adding recursive exclude to coverbin 'uvm_pkg/uvm_test_top/env/slave_agent/m_mon/cov/r_cg/pslverr_value/on'
+Adding recursive exclude to coverbin 'apb_pkg/"apb_coverage#(32, 32)::r_cg"/pslverr_value/on'

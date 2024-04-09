@@ -1,9 +1,3 @@
-
-/*
-* * * * *   AGENT CONFIGURATION     * * * * * 
-    You can add specific fields for your agents here
-*/
-
 class vr_cfg extends uvm_object;  
 
 //  Enables protocol checks

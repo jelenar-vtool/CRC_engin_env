@@ -1,0 +1,554 @@
+xrun(64): 22.03-s002: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	22.03-s002: Started on Mar 28, 2024 at 10:47:05 UTC
+xrun
+	-clean
+	-64bit
+	-timescale 1ns/1ns
+	-sysv
+	-access +rwc
+	-uvmhome CDNS-1.2
+	-seed 1
+	-l apb_base_sqr_test
+	-f /space/users/jelenar/BGFFIFO/scripts/filelist1.f
+		+incdir+/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc
+		/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_if.sv
+		+incdir+/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc
+		/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_pkg.sv
+		+incdir+/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env
+		/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env/apb_env_pkg.sv
+		+incdir+/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/tests
+		+incdir+/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/tb
+		/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/tb/top.sv
+	+UVM_TESTNAME=apb_base_sqr_test
+	+UVM_VERBOSITY=UVM_HIGH
+	+UVM_MAX_QUIT_COUNT=1
+	+define+IXCOM_1X
+	-run
+	-exit
+
+   User defined plus("+") options:
+	+UVM_VERBOSITY=UVM_HIGH
+	+UVM_MAX_QUIT_COUNT=1
+
+xrun: *N,CLEAN: Removing existing directory ./xcelium.d.
+Compiling UVM packages (uvm_pkg.sv cdns_uvm_pkg.sv) using uvmhome location /tools/cdnc/xcelium/current/tools/methodology/UVM/CDNS-1.2
+file: /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_if.sv
+	interface worklib.apb_if:sv
+		errors: 0, warnings: 0
+file: /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_pkg.sv
+	req = apb_item::type_id::create("req"); 
+	             |
+xmvlog: *W,NOUNAD (/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_sequence_lib.sv,75|14): This unadorned reference to a parameterized class (apb_item) is not legal. A class specialization of '#()' is assumed.
+	rsp = apb_item::type_id::create("rsp");
+	             |
+xmvlog: *W,NOUNAD (/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_sequence_lib.sv,76|14): This unadorned reference to a parameterized class (apb_item) is not legal. A class specialization of '#()' is assumed.
+	package worklib.apb_pkg:sv
+		errors: 0, warnings: 2
+file: /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env/apb_env_pkg.sv
+package apb_pkg;
+              |
+xmvlog: *W,RECOME (/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_pkg.sv,7|14): recompiling design unit worklib.apb_pkg:sv.
+	First compiled from line 7 of /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_pkg.sv.
+	req = apb_item::type_id::create("req"); 
+	             |
+xmvlog: *W,NOUNAD (/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_sequence_lib.sv,75|14): This unadorned reference to a parameterized class (apb_item) is not legal. A class specialization of '#()' is assumed.
+	rsp = apb_item::type_id::create("rsp");
+	             |
+xmvlog: *W,NOUNAD (/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_sequence_lib.sv,76|14): This unadorned reference to a parameterized class (apb_item) is not legal. A class specialization of '#()' is assumed.
+	package worklib.apb_pkg:sv
+		errors: 0, warnings: 3
+    $value$plusargs("VERBOSITY=%s", verbosity);
+                  |
+xmvlog: *W,NOSYST (/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/tests/apb_base_test.sv,77|18): System function '$value$plusargs' invoked as a task. Return value will be ignored.
+    $value$plusargs("VERBOSITY=%s", verbosity);
+                  |
+xmvlog: *W,NOSYST (/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/tests/apb_base_sqr_test.sv,76|18): System function '$value$plusargs' invoked as a task. Return value will be ignored.
+     function  apb_random_test::new(string name = "apb_random_test", uvm_component parent);
+                                              |
+xmvlog: *W,PMBDVI (/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/tests/apb_random_test.sv,13|46): Out of block declaration default argument value was not in prototype, and is ignored.
+     function  apb_emptread_test::new(string name = "apb_emptread_test", uvm_component parent);
+                                                |
+xmvlog: *W,PMBDVI (/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/tests/apb_emptread_test.sv,13|48): Out of block declaration default argument value was not in prototype, and is ignored.
+     function  apb_error_test::new(string name = "apb_error_test", uvm_component parent);
+                                             |
+xmvlog: *W,PMBDVI (/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/tests/apb_error_test.sv,13|45): Out of block declaration default argument value was not in prototype, and is ignored.
+package apb_env_pkg;
+                  |
+xmvlog: *W,TSNSPK (/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env/apb_env_pkg.sv,5|18): `timescale is not specified for the package.  The default timescale of 1ns/1ns will be assumed for this package.
+    sb = apb_sb::type_id::create("sb",this);
+              |
+xmvlog: *W,NOUNAD (/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env/apb_env.sv,43|14): This unadorned reference to a parameterized class (apb_sb) is not legal. A class specialization of '#()' is assumed.
+	package worklib.apb_env_pkg:sv
+		errors: 0, warnings: 7
+file: /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/tb/top.sv
+package apb_pkg;
+              |
+xmvlog: *W,RECOME (/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_pkg.sv,7|14): recompiling design unit worklib.apb_pkg:sv.
+	First compiled from line 7 of /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_pkg.sv.
+	req = apb_item::type_id::create("req"); 
+	             |
+xmvlog: *W,NOUNAD (/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_sequence_lib.sv,75|14): This unadorned reference to a parameterized class (apb_item) is not legal. A class specialization of '#()' is assumed.
+	rsp = apb_item::type_id::create("rsp");
+	             |
+xmvlog: *W,NOUNAD (/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_sequence_lib.sv,76|14): This unadorned reference to a parameterized class (apb_item) is not legal. A class specialization of '#()' is assumed.
+	package worklib.apb_pkg:sv
+		errors: 0, warnings: 3
+package apb_env_pkg;
+                  |
+xmvlog: *W,RECOME (/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env/apb_env_pkg.sv,5|18): recompiling design unit worklib.apb_env_pkg:sv.
+	First compiled from line 5 of /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env/apb_env_pkg.sv.
+    $value$plusargs("VERBOSITY=%s", verbosity);
+                  |
+xmvlog: *W,NOSYST (/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/tests/apb_base_test.sv,77|18): System function '$value$plusargs' invoked as a task. Return value will be ignored.
+    $value$plusargs("VERBOSITY=%s", verbosity);
+                  |
+xmvlog: *W,NOSYST (/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/tests/apb_base_sqr_test.sv,76|18): System function '$value$plusargs' invoked as a task. Return value will be ignored.
+     function  apb_random_test::new(string name = "apb_random_test", uvm_component parent);
+                                              |
+xmvlog: *W,PMBDVI (/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/tests/apb_random_test.sv,13|46): Out of block declaration default argument value was not in prototype, and is ignored.
+     function  apb_emptread_test::new(string name = "apb_emptread_test", uvm_component parent);
+                                                |
+xmvlog: *W,PMBDVI (/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/tests/apb_emptread_test.sv,13|48): Out of block declaration default argument value was not in prototype, and is ignored.
+     function  apb_error_test::new(string name = "apb_error_test", uvm_component parent);
+                                             |
+xmvlog: *W,PMBDVI (/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/tests/apb_error_test.sv,13|45): Out of block declaration default argument value was not in prototype, and is ignored.
+package apb_env_pkg;
+                  |
+xmvlog: *W,TSNSPK (/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env/apb_env_pkg.sv,5|18): `timescale is not specified for the package.  The default timescale of 1ns/1ns will be assumed for this package.
+    sb = apb_sb::type_id::create("sb",this);
+              |
+xmvlog: *W,NOUNAD (/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env/apb_env.sv,43|14): This unadorned reference to a parameterized class (apb_sb) is not legal. A class specialization of '#()' is assumed.
+	package worklib.apb_env_pkg:sv
+		errors: 0, warnings: 8
+        $value$plusargs("DUMPNAME=%s", logfile);
+                      |
+xmvlog: *W,NOSYST (/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/tb/top.sv,45|22): System function '$value$plusargs' invoked as a task. Return value will be ignored.
+	module worklib.top:sv
+		errors: 0, warnings: 1
+xmvlog: *W,SPDUSD: Include directory /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc given but not used.
+xmvlog: *W,SPDUSD: Include directory /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/tb given but not used.
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 2
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		uvm_pkg
+		cdns_uvmapi
+		cdns_assert2uvm_pkg
+		cdns_uvm_pkg
+		apb_pkg
+		apb_env_pkg
+		top
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.top:sv <0x76e66cbb>
+			streams: 570, words: 791967
+		worklib.uvm_pkg:sv <0x22512c2e>
+			streams:  24, words: 32642
+		worklib.uvm_pkg:sv <0x58322f71>
+			streams:  24, words: 18410
+		worklib.apb_pkg:sv <0x5ee98118>
+			streams: 535, words: 755042
+		worklib.cdns_uvm_pkg:sv <0x11701445>
+			streams: 237, words: 381370
+		worklib.cdns_uvmapi:svp <0x23593652>
+			streams:  27, words: 29972
+		worklib.cdns_assert2uvm_pkg:sv <0x7ef5ecd9>
+			streams:   3, words:  1818
+		worklib.uvm_pkg:sv <0x534e305c>
+			streams: 5293, words: 8232613
+		worklib.apb_if:sv <0x6efb5c85>
+			streams:  21, words: 17162
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                       Instances  Unique
+		Modules:                       1       1
+		Interfaces:                    1       1
+		Verilog packages:              6       6
+		Registers:                 17751   12131
+		Scalar wires:                  2       -
+		Named events:                  4      12
+		Always blocks:                12      12
+		Initial blocks:              396     192
+		Clocking blocks:               1       1
+		Clocking items:                3       3
+		Parallel blocks:              35      36
+		Pseudo assignments:            2       2
+		Assertions:                    8       8
+		Covergroup Instances:          0       2
+		SV Class declarations:       253     369
+		SV Class specializations:    488     488
+		Simulation timescale:        1ns
+	Writing initial simulation snapshot: worklib.top:sv
+Loading snapshot worklib.top:sv .................... Done
+SVSEED set from command line: 1
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+xcelium> source /tools/cdnc/xcelium/current/tools/xcelium/files/xmsimrc
+xcelium> source /tools/cdnc/xcelium/current/tools/methodology/UVM/CDNS-1.2/additions/sv/files/tcl/uvm_sim.tcl
+xcelium> run
+UVM_INFO /tools/cdnc/xcelium/current/tools/methodology/UVM/CDNS-1.2/sv/src/base/uvm_root.svh(412) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+CDNS-UVM-1.2 (22.03-s002)
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO @ 0: reporter [RNTST] Running test apb_base_sqr_test...
+xmsim: *W,PRPASZ: Packed array at "worklib.uvm_pkg::uvm_string_to_bits.uvm_string_to_bits" of 115200 bits exceeds limit of 4096 - not probed
+ Use 'probe -create -packed 115200 worklib.uvm_pkg::uvm_string_to_bits.uvm_string_to_bits' or 'setenv SHM_PACKED_LIMIT 115200' to adjust limit.
+xmsim: *W,PRPASZ: Packed array at "worklib.uvm_pkg::uvm_bits_to_string.str" of 115200 bits exceeds limit of 4096 - not probed
+ Use 'probe -create -packed 115200 worklib.uvm_pkg::uvm_bits_to_string.str' or 'setenv SHM_PACKED_LIMIT 115200' to adjust limit.
+xmsim: *W,PRPASZ: Packed array at "worklib.cdns_uvm_pkg::_temp" of 115200 bits exceeds limit of 4096 - not probed
+ Use 'probe -create -packed 115200 worklib.cdns_uvm_pkg::_temp' or 'setenv SHM_PACKED_LIMIT 115200' to adjust limit.
+xmsim: *W,PRPASZ: Packed array at "worklib.cdns_uvm_pkg::_temp2" of 115200 bits exceeds limit of 4096 - not probed
+ Use 'probe -create -packed 115200 worklib.cdns_uvm_pkg::_temp2' or 'setenv SHM_PACKED_LIMIT 115200' to adjust limit.
+UVM_INFO @ 0: reporter [MAXQUITSET] '+UVM_MAX_QUIT_COUNT=1' provided on the command line is being applied.
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/tests/apb_base_sqr_test.sv(32) @ 0: uvm_test_top [build_phase] Enviroment created.
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/tests/apb_base_sqr_test.sv(62) @ 0: uvm_test_top [config] Default configuration set.
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_agent.sv(26) @ 0: uvm_test_top.env.master_agent [apb_agent] apb UVC
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_agent.sv(26) @ 0: uvm_test_top.env.slave_agent [apb_agent] apb UVC
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_agent.sv(37) @ 0: uvm_test_top.env.master_agent [build_phase_apb_agent] apb_if was set through config db
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_agent.sv(39) @ 0: uvm_test_top.env.master_agent [AGENT] cfg.agent_type = 0
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_agent.sv(44) @ 0: uvm_test_top.env.master_agent [build_phase_master_agent] Master driver and sequencer created.
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_master_driver.sv(27) @ 0: uvm_test_top.env.master_agent.m_drv [build_phase] BUILD apb_MASTER_DRIVER
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_monitor.sv(38) @ 0: uvm_test_top.env.master_agent.m_mon [build_phase] BUILD apb_MONITOR
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_master_sequencer.sv(26) @ 0: uvm_test_top.env.master_agent.m_seqr [build_phase] CFG is set through config db
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_agent.sv(37) @ 0: uvm_test_top.env.slave_agent [build_phase_apb_agent] apb_if was set through config db
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_agent.sv(39) @ 0: uvm_test_top.env.slave_agent [AGENT] cfg.agent_type = 1
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_agent.sv(49) @ 0: uvm_test_top.env.slave_agent [build_phase_master_agent] Slave driver and sequencer created.
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_monitor.sv(38) @ 0: uvm_test_top.env.slave_agent.m_mon [build_phase] BUILD apb_MONITOR
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(28) @ 0: uvm_test_top.env.slave_agent.s_drv [build_phase] BUILD apb_slave_DRIVER
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_slave_sequencer.sv(25) @ 0: uvm_test_top.env.slave_agent.s_seqr [build_phase] CFG is set through config db
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_agent.sv(59) @ 0: uvm_test_top.env.master_agent [connect_phase_apb_agent] master driver connected.
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_agent.sv(63) @ 0: uvm_test_top.env.slave_agent [connect_phase_apb_agent] slave driver connected.
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/tests/apb_base_sqr_test.sv(72) @ 0: uvm_test_top [start_of_simulation_phase] Printing topology
+UVM_INFO /tools/cdnc/xcelium/current/tools/methodology/UVM/CDNS-1.2/sv/src/base/uvm_root.svh(605) @ 0: reporter [UVMTOP] UVM testbench topology:
+--------------------------------------------------------------------------
+Name                           Type                            Size  Value
+--------------------------------------------------------------------------
+uvm_test_top                   apb_base_sqr_test               -     @2007
+  env                          uvm_env                         -     @2082
+    master_agent               apb_agent#(ADDR,DATA)           -     @2165
+      m_drv                    apb_master_driver#(ADDR,DATA)   -     @2928
+        rsp_port               uvm_analysis_port               -     @3036
+        seq_item_port          uvm_seq_item_pull_port          -     @2984
+      m_mon                    apb_monitor#(ADDR,DATA)         -     @2233
+        apb_mon_analysis_port  uvm_analysis_port               -     @3797
+        cov                    apb_coverage                    -     @3771
+      m_seqr                   apb_master_sequencer            -     @3069
+        rsp_export             uvm_analysis_export             -     @3128
+        seq_item_export        uvm_seq_item_pull_imp           -     @3688
+        arbitration_queue      array                           0     -    
+        lock_queue             array                           0     -    
+        num_last_reqs          integral                        32    'd1  
+        num_last_rsps          integral                        32    'd1  
+    sb                         apb_sb                          -     @2889
+      m_mon_imp                uvm_analysis_imp_m_mon          -     @3908
+      s_mon_imp                uvm_analysis_imp_s_mon          -     @3958
+    sequencer                  virtual_sequencer               -     @2204
+      rsp_export               uvm_analysis_export             -     @2294
+      seq_item_export          uvm_seq_item_pull_imp           -     @2856
+      arbitration_queue        array                           0     -    
+      lock_queue               array                           0     -    
+      num_last_reqs            integral                        32    'd1  
+      num_last_rsps            integral                        32    'd1  
+    slave_agent                apb_agent#(ADDR,DATA)           -     @2123
+      m_mon                    apb_monitor#(ADDR,DATA)         -     @3875
+        apb_mon_analysis_port  uvm_analysis_port               -     @4839
+        cov                    apb_coverage                    -     @4870
+      s_drv                    slave_empty_driver#(ADDR,DATA)  -     @4008
+        rsp_port               uvm_analysis_port               -     @4107
+        seq_item_port          uvm_seq_item_pull_port          -     @4058
+      s_seqr                   apb_slave_sequencer             -     @4138
+        rsp_export             uvm_analysis_export             -     @4196
+        seq_item_export        uvm_seq_item_pull_imp           -     @4748
+        arbitration_queue      array                           0     -    
+        lock_queue             array                           0     -    
+        num_last_reqs          integral                        32    'd1  
+        num_last_rsps          integral                        32    'd1  
+--------------------------------------------------------------------------
+
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/tests/apb_base_sqr_test.sv(77) @ 0: uvm_test_top [start_of_simulation_phase] Verbosity is set to UVM_LOW.
+SDI/Verilog Transaction Recording Facility Version 22.03-s002
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env/apb_scoreboard.sv(56) @ 0: uvm_test_top.env.sb [SCOREBOARD] run task, for reset
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env/apb_scoreboard.sv(62) @ 0: uvm_test_top.env.sb [SCOREBOARD] run task
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_agent.sv(70) @ 0: uvm_test_top.env.master_agent [poruka] lebac
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_master_driver.sv(82) @ 20: uvm_test_top.env.master_agent.m_drv [Driver] MASTER-do_init task executed
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env/apb_scoreboard.sv(56) @ 105: uvm_test_top.env.sb [SCOREBOARD] run task, for reset
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_master_driver.sv(104) @ 260: uvm_test_top.env.master_agent.m_drv [Driver-MASTER] write trans
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_master_driver.sv(112) @ 260: uvm_test_top.env.master_agent.m_drv [master] paddr = 00000000
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_master_driver.sv(113) @ 260: uvm_test_top.env.master_agent.m_drv [smaster] pwdata = 00000000
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_master_driver.sv(117) @ 300: uvm_test_top.env.master_agent.m_drv [Driver-MASTER] enale trans
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(93) @ 300: uvm_test_top.env.slave_agent.s_drv [slave] slavedriveraddr = fa719a5e
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(99) @ 300: uvm_test_top.env.slave_agent.s_drv [rsp] aa
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(105) @ 300: uvm_test_top.env.slave_agent.s_drv [pready] pready = 1
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(106) @ 300: uvm_test_top.env.slave_agent.s_drv [redia] aa
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(108) @ 300: uvm_test_top.env.slave_agent.s_drv [RWRITEEEE] aa
+xmsim: *E,ASRTST (/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_if.sv,43): (time 300 NS) Assertion top.apb_vif.addr_a has failed 
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_monitor.sv(105) @ 340: uvm_test_top.env.master_agent.m_mon [M] Wd
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_monitor.sv(112) @ 340: uvm_test_top.env.master_agent.m_mon [Monitor] do_monitor task executed
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env/apb_scoreboard.sv(30) @ 340: uvm_test_top.env.sb [Scoreboard] Just recieved item from master monitor
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env/apb_scoreboard.sv(35) @ 340: uvm_test_top.env.sb [scoreboard] addr = fa719a5e
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env/apb_scoreboard.sv(36) @ 340: uvm_test_top.env.sb [scoreboard] wdata = f13cb683
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_monitor.sv(105) @ 340: uvm_test_top.env.slave_agent.m_mon [M] Wd
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_monitor.sv(112) @ 340: uvm_test_top.env.slave_agent.m_mon [Monitor] do_monitor task executed
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env/apb_scoreboard.sv(42) @ 340: uvm_test_top.env.sb [Scoreboard] Just recieved item from slave monitor
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_master_driver.sv(93) @ 340: uvm_test_top.env.master_agent.m_drv [Driver] MASTER-do_drive task executed
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_master_driver.sv(104) @ 380: uvm_test_top.env.master_agent.m_drv [Driver-MASTER] write trans
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_master_driver.sv(112) @ 380: uvm_test_top.env.master_agent.m_drv [master] paddr = fa719a5e
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_master_driver.sv(113) @ 380: uvm_test_top.env.master_agent.m_drv [smaster] pwdata = f13cb683
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_master_driver.sv(117) @ 420: uvm_test_top.env.master_agent.m_drv [Driver-MASTER] enale trans
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(93) @ 420: uvm_test_top.env.slave_agent.s_drv [slave] slavedriveraddr = 027610da
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(99) @ 420: uvm_test_top.env.slave_agent.s_drv [rsp] aa
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(105) @ 420: uvm_test_top.env.slave_agent.s_drv [pready] pready = 1
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(106) @ 420: uvm_test_top.env.slave_agent.s_drv [redia] aa
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(108) @ 420: uvm_test_top.env.slave_agent.s_drv [RWRITEEEE] aa
+xmsim: *E,ASRTST (/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_if.sv,43): (time 420 NS) Assertion top.apb_vif.addr_a has failed 
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_monitor.sv(105) @ 460: uvm_test_top.env.master_agent.m_mon [M] Wd
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_monitor.sv(112) @ 460: uvm_test_top.env.master_agent.m_mon [Monitor] do_monitor task executed
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env/apb_scoreboard.sv(30) @ 460: uvm_test_top.env.sb [Scoreboard] Just recieved item from master monitor
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env/apb_scoreboard.sv(35) @ 460: uvm_test_top.env.sb [scoreboard] addr = 027610da
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env/apb_scoreboard.sv(36) @ 460: uvm_test_top.env.sb [scoreboard] wdata = 21d3b63a
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_monitor.sv(105) @ 460: uvm_test_top.env.slave_agent.m_mon [M] Wd
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_monitor.sv(112) @ 460: uvm_test_top.env.slave_agent.m_mon [Monitor] do_monitor task executed
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env/apb_scoreboard.sv(42) @ 460: uvm_test_top.env.sb [Scoreboard] Just recieved item from slave monitor
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_master_driver.sv(93) @ 460: uvm_test_top.env.master_agent.m_drv [Driver] MASTER-do_drive task executed
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_master_driver.sv(104) @ 500: uvm_test_top.env.master_agent.m_drv [Driver-MASTER] write trans
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_master_driver.sv(112) @ 500: uvm_test_top.env.master_agent.m_drv [master] paddr = 027610da
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_master_driver.sv(113) @ 500: uvm_test_top.env.master_agent.m_drv [smaster] pwdata = 21d3b63a
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_master_driver.sv(117) @ 540: uvm_test_top.env.master_agent.m_drv [Driver-MASTER] enale trans
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(93) @ 540: uvm_test_top.env.slave_agent.s_drv [slave] slavedriveraddr = 399af2e5
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(99) @ 540: uvm_test_top.env.slave_agent.s_drv [rsp] aa
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(105) @ 540: uvm_test_top.env.slave_agent.s_drv [pready] pready = 1
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(106) @ 540: uvm_test_top.env.slave_agent.s_drv [redia] aa
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(108) @ 540: uvm_test_top.env.slave_agent.s_drv [RWRITEEEE] aa
+xmsim: *E,ASRTST (/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_if.sv,43): (time 540 NS) Assertion top.apb_vif.addr_a has failed 
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_monitor.sv(105) @ 580: uvm_test_top.env.master_agent.m_mon [M] Wd
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_monitor.sv(112) @ 580: uvm_test_top.env.master_agent.m_mon [Monitor] do_monitor task executed
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env/apb_scoreboard.sv(30) @ 580: uvm_test_top.env.sb [Scoreboard] Just recieved item from master monitor
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env/apb_scoreboard.sv(35) @ 580: uvm_test_top.env.sb [scoreboard] addr = 399af2e5
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env/apb_scoreboard.sv(36) @ 580: uvm_test_top.env.sb [scoreboard] wdata = 03f7289b
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_monitor.sv(105) @ 580: uvm_test_top.env.slave_agent.m_mon [M] Wd
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_monitor.sv(112) @ 580: uvm_test_top.env.slave_agent.m_mon [Monitor] do_monitor task executed
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env/apb_scoreboard.sv(42) @ 580: uvm_test_top.env.sb [Scoreboard] Just recieved item from slave monitor
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_master_driver.sv(93) @ 580: uvm_test_top.env.master_agent.m_drv [Driver] MASTER-do_drive task executed
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_master_driver.sv(104) @ 620: uvm_test_top.env.master_agent.m_drv [Driver-MASTER] write trans
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_master_driver.sv(112) @ 620: uvm_test_top.env.master_agent.m_drv [master] paddr = 399af2e5
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_master_driver.sv(113) @ 620: uvm_test_top.env.master_agent.m_drv [smaster] pwdata = 03f7289b
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_master_driver.sv(117) @ 660: uvm_test_top.env.master_agent.m_drv [Driver-MASTER] enale trans
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(93) @ 660: uvm_test_top.env.slave_agent.s_drv [slave] slavedriveraddr = 35f0f9f4
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(99) @ 660: uvm_test_top.env.slave_agent.s_drv [rsp] aa
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(105) @ 660: uvm_test_top.env.slave_agent.s_drv [pready] pready = 1
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(106) @ 660: uvm_test_top.env.slave_agent.s_drv [redia] aa
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(108) @ 660: uvm_test_top.env.slave_agent.s_drv [RWRITEEEE] aa
+xmsim: *E,ASRTST (/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_if.sv,43): (time 660 NS) Assertion top.apb_vif.addr_a has failed 
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_monitor.sv(105) @ 700: uvm_test_top.env.master_agent.m_mon [M] Wd
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_monitor.sv(112) @ 700: uvm_test_top.env.master_agent.m_mon [Monitor] do_monitor task executed
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env/apb_scoreboard.sv(30) @ 700: uvm_test_top.env.sb [Scoreboard] Just recieved item from master monitor
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env/apb_scoreboard.sv(35) @ 700: uvm_test_top.env.sb [scoreboard] addr = 35f0f9f4
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env/apb_scoreboard.sv(36) @ 700: uvm_test_top.env.sb [scoreboard] wdata = 9a7d7b3b
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_monitor.sv(105) @ 700: uvm_test_top.env.slave_agent.m_mon [M] Wd
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_monitor.sv(112) @ 700: uvm_test_top.env.slave_agent.m_mon [Monitor] do_monitor task executed
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env/apb_scoreboard.sv(42) @ 700: uvm_test_top.env.sb [Scoreboard] Just recieved item from slave monitor
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_master_driver.sv(93) @ 700: uvm_test_top.env.master_agent.m_drv [Driver] MASTER-do_drive task executed
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_master_driver.sv(104) @ 740: uvm_test_top.env.master_agent.m_drv [Driver-MASTER] write trans
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_master_driver.sv(112) @ 740: uvm_test_top.env.master_agent.m_drv [master] paddr = 35f0f9f4
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_master_driver.sv(113) @ 740: uvm_test_top.env.master_agent.m_drv [smaster] pwdata = 9a7d7b3b
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_master_driver.sv(117) @ 780: uvm_test_top.env.master_agent.m_drv [Driver-MASTER] enale trans
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(93) @ 780: uvm_test_top.env.slave_agent.s_drv [slave] slavedriveraddr = 32269dd5
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(99) @ 780: uvm_test_top.env.slave_agent.s_drv [rsp] aa
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(105) @ 780: uvm_test_top.env.slave_agent.s_drv [pready] pready = 1
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(106) @ 780: uvm_test_top.env.slave_agent.s_drv [redia] aa
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(108) @ 780: uvm_test_top.env.slave_agent.s_drv [RWRITEEEE] aa
+xmsim: *E,ASRTST (/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_if.sv,43): (time 780 NS) Assertion top.apb_vif.addr_a has failed 
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_monitor.sv(105) @ 820: uvm_test_top.env.master_agent.m_mon [M] Wd
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_monitor.sv(112) @ 820: uvm_test_top.env.master_agent.m_mon [Monitor] do_monitor task executed
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env/apb_scoreboard.sv(30) @ 820: uvm_test_top.env.sb [Scoreboard] Just recieved item from master monitor
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env/apb_scoreboard.sv(35) @ 820: uvm_test_top.env.sb [scoreboard] addr = 32269dd5
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env/apb_scoreboard.sv(36) @ 820: uvm_test_top.env.sb [scoreboard] wdata = f8991373
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_monitor.sv(105) @ 820: uvm_test_top.env.slave_agent.m_mon [M] Wd
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_monitor.sv(112) @ 820: uvm_test_top.env.slave_agent.m_mon [Monitor] do_monitor task executed
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env/apb_scoreboard.sv(42) @ 820: uvm_test_top.env.sb [Scoreboard] Just recieved item from slave monitor
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_master_driver.sv(93) @ 820: uvm_test_top.env.master_agent.m_drv [Driver] MASTER-do_drive task executed
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_master_driver.sv(126) @ 860: uvm_test_top.env.master_agent.m_drv [Driver] MASTER-read trans
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_master_driver.sv(131) @ 860: uvm_test_top.env.master_agent.m_drv [master] paddr = 32269dd5
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(93) @ 900: uvm_test_top.env.slave_agent.s_drv [slave] slavedriveraddr = 399af2e5
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_sequence_lib.sv(95) @ 900: uvm_test_top.env.slave_agent.s_seqr@@ms_seq.seq2 [error_flag] error_flag = 1
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_sequence_lib.sv(97) @ 900: uvm_test_top.env.slave_agent.s_seqr@@ms_seq.seq2 [slave] paddrSQR = 399af2e5
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_sequence_lib.sv(98) @ 900: uvm_test_top.env.slave_agent.s_seqr@@ms_seq.seq2 [slave] paddrSQRprdata = 03f7289b
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_sequence_lib.sv(99) @ 900: uvm_test_top.env.slave_agent.s_seqr@@ms_seq.seq2 [slave] prdataSQR = 03f7289b
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(99) @ 900: uvm_test_top.env.slave_agent.s_drv [rsp] aa
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(105) @ 900: uvm_test_top.env.slave_agent.s_drv [pready] pready = 1
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(106) @ 900: uvm_test_top.env.slave_agent.s_drv [redia] aa
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(117) @ 900: uvm_test_top.env.slave_agent.s_drv [READDD] aa
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(119) @ 900: uvm_test_top.env.slave_agent.s_drv [rdata] rdata = 03f7289b
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(122) @ 900: uvm_test_top.env.slave_agent.s_drv [pslverr] pslverr = 0
+xmsim: *E,ASRTST (/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_if.sv,43): (time 900 NS) Assertion top.apb_vif.addr_a has failed 
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_monitor.sv(112) @ 940: uvm_test_top.env.master_agent.m_mon [Monitor] do_monitor task executed
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env/apb_scoreboard.sv(30) @ 940: uvm_test_top.env.sb [Scoreboard] Just recieved item from master monitor
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_monitor.sv(112) @ 940: uvm_test_top.env.slave_agent.m_mon [Monitor] do_monitor task executed
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env/apb_scoreboard.sv(42) @ 940: uvm_test_top.env.sb [Scoreboard] Just recieved item from slave monitor
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env/apb_scoreboard.sv(47) @ 940: uvm_test_top.env.sb [scoreboard] addr = 399af2e5
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env/apb_scoreboard.sv(48) @ 940: uvm_test_top.env.sb [scoreboard] rdata = 03f7289b
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_master_driver.sv(93) @ 940: uvm_test_top.env.master_agent.m_drv [Driver] MASTER-do_drive task executed
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_master_driver.sv(126) @ 980: uvm_test_top.env.master_agent.m_drv [Driver] MASTER-read trans
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_master_driver.sv(131) @ 980: uvm_test_top.env.master_agent.m_drv [master] paddr = 399af2e5
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(93) @ 1020: uvm_test_top.env.slave_agent.s_drv [slave] slavedriveraddr = 35f0f9f4
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_sequence_lib.sv(95) @ 1020: uvm_test_top.env.slave_agent.s_seqr@@ms_seq.seq2 [error_flag] error_flag = 2
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_sequence_lib.sv(97) @ 1020: uvm_test_top.env.slave_agent.s_seqr@@ms_seq.seq2 [slave] paddrSQR = 35f0f9f4
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_sequence_lib.sv(98) @ 1020: uvm_test_top.env.slave_agent.s_seqr@@ms_seq.seq2 [slave] paddrSQRprdata = 9a7d7b3b
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_sequence_lib.sv(99) @ 1020: uvm_test_top.env.slave_agent.s_seqr@@ms_seq.seq2 [slave] prdataSQR = 9a7d7b3b
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(99) @ 1020: uvm_test_top.env.slave_agent.s_drv [rsp] aa
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(105) @ 1020: uvm_test_top.env.slave_agent.s_drv [pready] pready = 1
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(106) @ 1020: uvm_test_top.env.slave_agent.s_drv [redia] aa
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(117) @ 1020: uvm_test_top.env.slave_agent.s_drv [READDD] aa
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(119) @ 1020: uvm_test_top.env.slave_agent.s_drv [rdata] rdata = 9a7d7b3b
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(122) @ 1020: uvm_test_top.env.slave_agent.s_drv [pslverr] pslverr = 0
+xmsim: *E,ASRTST (/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_if.sv,43): (time 1020 NS) Assertion top.apb_vif.addr_a has failed 
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_monitor.sv(112) @ 1060: uvm_test_top.env.master_agent.m_mon [Monitor] do_monitor task executed
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env/apb_scoreboard.sv(30) @ 1060: uvm_test_top.env.sb [Scoreboard] Just recieved item from master monitor
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_monitor.sv(112) @ 1060: uvm_test_top.env.slave_agent.m_mon [Monitor] do_monitor task executed
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env/apb_scoreboard.sv(42) @ 1060: uvm_test_top.env.sb [Scoreboard] Just recieved item from slave monitor
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env/apb_scoreboard.sv(47) @ 1060: uvm_test_top.env.sb [scoreboard] addr = 35f0f9f4
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env/apb_scoreboard.sv(48) @ 1060: uvm_test_top.env.sb [scoreboard] rdata = 9a7d7b3b
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_master_driver.sv(93) @ 1060: uvm_test_top.env.master_agent.m_drv [Driver] MASTER-do_drive task executed
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_master_driver.sv(126) @ 1100: uvm_test_top.env.master_agent.m_drv [Driver] MASTER-read trans
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_master_driver.sv(131) @ 1100: uvm_test_top.env.master_agent.m_drv [master] paddr = 35f0f9f4
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(93) @ 1140: uvm_test_top.env.slave_agent.s_drv [slave] slavedriveraddr = 027610da
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_sequence_lib.sv(95) @ 1140: uvm_test_top.env.slave_agent.s_seqr@@ms_seq.seq2 [error_flag] error_flag = 3
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_sequence_lib.sv(97) @ 1140: uvm_test_top.env.slave_agent.s_seqr@@ms_seq.seq2 [slave] paddrSQR = 027610da
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_sequence_lib.sv(98) @ 1140: uvm_test_top.env.slave_agent.s_seqr@@ms_seq.seq2 [slave] paddrSQRprdata = 21d3b63a
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_sequence_lib.sv(99) @ 1140: uvm_test_top.env.slave_agent.s_seqr@@ms_seq.seq2 [slave] prdataSQR = 21d3b63a
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(99) @ 1140: uvm_test_top.env.slave_agent.s_drv [rsp] aa
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(105) @ 1140: uvm_test_top.env.slave_agent.s_drv [pready] pready = 1
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(106) @ 1140: uvm_test_top.env.slave_agent.s_drv [redia] aa
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(117) @ 1140: uvm_test_top.env.slave_agent.s_drv [READDD] aa
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(119) @ 1140: uvm_test_top.env.slave_agent.s_drv [rdata] rdata = 21d3b63a
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(122) @ 1140: uvm_test_top.env.slave_agent.s_drv [pslverr] pslverr = 0
+xmsim: *E,ASRTST (/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_if.sv,43): (time 1140 NS) Assertion top.apb_vif.addr_a has failed 
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_monitor.sv(112) @ 1180: uvm_test_top.env.master_agent.m_mon [Monitor] do_monitor task executed
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env/apb_scoreboard.sv(30) @ 1180: uvm_test_top.env.sb [Scoreboard] Just recieved item from master monitor
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_monitor.sv(112) @ 1180: uvm_test_top.env.slave_agent.m_mon [Monitor] do_monitor task executed
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env/apb_scoreboard.sv(42) @ 1180: uvm_test_top.env.sb [Scoreboard] Just recieved item from slave monitor
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env/apb_scoreboard.sv(47) @ 1180: uvm_test_top.env.sb [scoreboard] addr = 027610da
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env/apb_scoreboard.sv(48) @ 1180: uvm_test_top.env.sb [scoreboard] rdata = 21d3b63a
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_master_driver.sv(93) @ 1180: uvm_test_top.env.master_agent.m_drv [Driver] MASTER-do_drive task executed
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_master_driver.sv(126) @ 1220: uvm_test_top.env.master_agent.m_drv [Driver] MASTER-read trans
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_master_driver.sv(131) @ 1220: uvm_test_top.env.master_agent.m_drv [master] paddr = 027610da
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(93) @ 1260: uvm_test_top.env.slave_agent.s_drv [slave] slavedriveraddr = fa719a5e
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_sequence_lib.sv(95) @ 1260: uvm_test_top.env.slave_agent.s_seqr@@ms_seq.seq2 [error_flag] error_flag = 4
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_sequence_lib.sv(97) @ 1260: uvm_test_top.env.slave_agent.s_seqr@@ms_seq.seq2 [slave] paddrSQR = fa719a5e
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_sequence_lib.sv(98) @ 1260: uvm_test_top.env.slave_agent.s_seqr@@ms_seq.seq2 [slave] paddrSQRprdata = f13cb683
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_sequence_lib.sv(99) @ 1260: uvm_test_top.env.slave_agent.s_seqr@@ms_seq.seq2 [slave] prdataSQR = f13cb683
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(99) @ 1260: uvm_test_top.env.slave_agent.s_drv [rsp] aa
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(105) @ 1260: uvm_test_top.env.slave_agent.s_drv [pready] pready = 1
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(106) @ 1260: uvm_test_top.env.slave_agent.s_drv [redia] aa
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(117) @ 1260: uvm_test_top.env.slave_agent.s_drv [READDD] aa
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(119) @ 1260: uvm_test_top.env.slave_agent.s_drv [rdata] rdata = f13cb683
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(122) @ 1260: uvm_test_top.env.slave_agent.s_drv [pslverr] pslverr = 0
+xmsim: *E,ASRTST (/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_if.sv,43): (time 1260 NS) Assertion top.apb_vif.addr_a has failed 
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_monitor.sv(112) @ 1300: uvm_test_top.env.master_agent.m_mon [Monitor] do_monitor task executed
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env/apb_scoreboard.sv(30) @ 1300: uvm_test_top.env.sb [Scoreboard] Just recieved item from master monitor
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_monitor.sv(112) @ 1300: uvm_test_top.env.slave_agent.m_mon [Monitor] do_monitor task executed
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env/apb_scoreboard.sv(42) @ 1300: uvm_test_top.env.sb [Scoreboard] Just recieved item from slave monitor
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env/apb_scoreboard.sv(47) @ 1300: uvm_test_top.env.sb [scoreboard] addr = fa719a5e
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env/apb_scoreboard.sv(48) @ 1300: uvm_test_top.env.sb [scoreboard] rdata = f13cb683
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_master_driver.sv(93) @ 1300: uvm_test_top.env.master_agent.m_drv [Driver] MASTER-do_drive task executed
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_master_driver.sv(126) @ 1340: uvm_test_top.env.master_agent.m_drv [Driver] MASTER-read trans
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_master_driver.sv(131) @ 1340: uvm_test_top.env.master_agent.m_drv [master] paddr = fa719a5e
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(93) @ 1380: uvm_test_top.env.slave_agent.s_drv [slave] slavedriveraddr = 32269dd5
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_sequence_lib.sv(95) @ 1380: uvm_test_top.env.slave_agent.s_seqr@@ms_seq.seq2 [error_flag] error_flag = 5
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_sequence_lib.sv(97) @ 1380: uvm_test_top.env.slave_agent.s_seqr@@ms_seq.seq2 [slave] paddrSQR = 32269dd5
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_sequence_lib.sv(98) @ 1380: uvm_test_top.env.slave_agent.s_seqr@@ms_seq.seq2 [slave] paddrSQRprdata = f8991373
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_sequence_lib.sv(99) @ 1380: uvm_test_top.env.slave_agent.s_seqr@@ms_seq.seq2 [slave] prdataSQR = f8991373
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(99) @ 1380: uvm_test_top.env.slave_agent.s_drv [rsp] aa
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(105) @ 1380: uvm_test_top.env.slave_agent.s_drv [pready] pready = 1
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(106) @ 1380: uvm_test_top.env.slave_agent.s_drv [redia] aa
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(117) @ 1380: uvm_test_top.env.slave_agent.s_drv [READDD] aa
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(119) @ 1380: uvm_test_top.env.slave_agent.s_drv [rdata] rdata = f8991373
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(122) @ 1380: uvm_test_top.env.slave_agent.s_drv [pslverr] pslverr = 0
+xmsim: *E,ASRTST (/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_if.sv,43): (time 1380 NS) Assertion top.apb_vif.addr_a has failed 
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_monitor.sv(112) @ 1420: uvm_test_top.env.master_agent.m_mon [Monitor] do_monitor task executed
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env/apb_scoreboard.sv(30) @ 1420: uvm_test_top.env.sb [Scoreboard] Just recieved item from master monitor
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_monitor.sv(112) @ 1420: uvm_test_top.env.slave_agent.m_mon [Monitor] do_monitor task executed
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env/apb_scoreboard.sv(42) @ 1420: uvm_test_top.env.sb [Scoreboard] Just recieved item from slave monitor
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env/apb_scoreboard.sv(47) @ 1420: uvm_test_top.env.sb [scoreboard] addr = 32269dd5
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env/apb_scoreboard.sv(48) @ 1420: uvm_test_top.env.sb [scoreboard] rdata = f8991373
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_master_driver.sv(93) @ 1420: uvm_test_top.env.master_agent.m_drv [Driver] MASTER-do_drive task executed
+UVM_INFO /tools/cdnc/xcelium/current/tools/methodology/UVM/CDNS-1.2/sv/src/base/uvm_objection.svh(1271) @ 1520: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO /tools/cdnc/xcelium/current/tools/methodology/UVM/CDNS-1.2/sv/src/base/uvm_report_catcher.svh(705) @ 1520: reporter [UVM/REPORT/CATCHER] 
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+
+UVM_INFO /tools/cdnc/xcelium/current/tools/methodology/UVM/CDNS-1.2/sv/src/base/uvm_report_server.svh(847) @ 1520: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+Quit count :     0 of  1000
+** Report counts by severity
+UVM_INFO :  221
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[AGENT]     2
+[Driver]    16
+[Driver-MASTER]    10
+[M]    10
+[MAXQUITSET]     1
+[Monitor]    20
+[READDD]     5
+[RNTST]     1
+[RWRITEEEE]     5
+[SCOREBOARD]     3
+[Scoreboard]    20
+[TEST_DONE]     1
+[UVM/RELNOTES]     1
+[UVM/REPORT/CATCHER]     1
+[UVMTOP]     1
+[apb_agent]     2
+[build_phase]     7
+[build_phase_apb_agent]     2
+[build_phase_master_agent]     2
+[config]     1
+[connect_phase_apb_agent]     2
+[error_flag]     5
+[master]    10
+[poruka]     1
+[pready]    10
+[pslverr]     5
+[rdata]     5
+[redia]    10
+[rsp]    10
+[scoreboard]    20
+[slave]    25
+[smaster]     5
+[start_of_simulation_phase]     2
+
+Simulation complete via $finish(1) at time 1520 NS + 59
+/tools/cdnc/xcelium/current/tools/methodology/UVM/CDNS-1.2/sv/src/base/uvm_root.svh:543     $finish;
+xcelium> exit
+TOOL:	xrun(64)	22.03-s002: Exiting on Mar 28, 2024 at 10:47:13 UTC  (total: 00:00:08)

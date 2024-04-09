@@ -1,0 +1,30 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
++UVM_VERBOSITY=UVM_HIGH
++UVM_MAX_QUIT_COUNT=1
++incdir+/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc
++incdir+/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc
++incdir+/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env
++incdir+/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/tests
++incdir+/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/tb
++define+IXCOM_1X
+-loadpli
+/tools/cdnc/xcelium/current/tools/methodology/UVM/CDNS-1.2/additions/sv/lib/64bit/libuvmpli.so:uvm_pli_boot
+-timescale
+1ns/1ns
+-ACCESS
++rwc
++UVM_TESTNAME=apb_base_sqr_test
+-MESSAGES
+-XLMODE
+./xcelium.d/run.lnx8664.22.03.d
+-RUNMODE
+-CDSLIB
+./xcelium.d/run.lnx8664.22.03.d/cds.lib
+-HDLVAR
+./xcelium.d/run.lnx8664.22.03.d/hdl.var
+-WORK
+worklib
+-HASXLMODE

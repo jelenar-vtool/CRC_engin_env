@@ -1,0 +1,25 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-clean
+-64bit
+-timescale
+1ns/1ns
+-sysv
+-access
++rwc
+-uvmhome
+CDNS-1.2
+-seed
+1
+-l
+apb_base_test
+-f
+/space/users/jelenar/BGFFIFO/scripts/filelist1.f
++UVM_TESTNAME=apb_base_test
++UVM_VERBOSITY=UVM_HIGH
++UVM_MAX_QUIT_COUNT=1
++define+IXCOM_1X
+-run
+-exit

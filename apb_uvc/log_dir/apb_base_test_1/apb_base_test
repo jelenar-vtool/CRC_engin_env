@@ -1,0 +1,332 @@
+xrun(64): 22.03-s002: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	22.03-s002: Started on Mar 28, 2024 at 10:45:15 UTC
+xrun
+	-clean
+	-64bit
+	-timescale 1ns/1ns
+	-sysv
+	-access +rwc
+	-uvmhome CDNS-1.2
+	-seed 1
+	-l apb_base_test
+	-f /space/users/jelenar/BGFFIFO/scripts/filelist1.f
+		+incdir+/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc
+		/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_if.sv
+		+incdir+/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc
+		/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_pkg.sv
+		+incdir+/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env
+		/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env/apb_env_pkg.sv
+		+incdir+/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/tests
+		+incdir+/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/tb
+		/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/tb/top.sv
+	+UVM_TESTNAME=apb_base_test
+	+UVM_VERBOSITY=UVM_HIGH
+	+UVM_MAX_QUIT_COUNT=1
+	+define+IXCOM_1X
+	-run
+	-exit
+
+   User defined plus("+") options:
+	+UVM_VERBOSITY=UVM_HIGH
+	+UVM_MAX_QUIT_COUNT=1
+
+xrun: *N,CLEAN: Removing existing directory ./xcelium.d.
+Compiling UVM packages (uvm_pkg.sv cdns_uvm_pkg.sv) using uvmhome location /tools/cdnc/xcelium/current/tools/methodology/UVM/CDNS-1.2
+file: /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_if.sv
+	interface worklib.apb_if:sv
+		errors: 0, warnings: 0
+file: /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_pkg.sv
+	req = apb_item::type_id::create("req"); 
+	             |
+xmvlog: *W,NOUNAD (/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_sequence_lib.sv,75|14): This unadorned reference to a parameterized class (apb_item) is not legal. A class specialization of '#()' is assumed.
+	rsp = apb_item::type_id::create("rsp");
+	             |
+xmvlog: *W,NOUNAD (/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_sequence_lib.sv,76|14): This unadorned reference to a parameterized class (apb_item) is not legal. A class specialization of '#()' is assumed.
+	package worklib.apb_pkg:sv
+		errors: 0, warnings: 2
+file: /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env/apb_env_pkg.sv
+package apb_pkg;
+              |
+xmvlog: *W,RECOME (/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_pkg.sv,7|14): recompiling design unit worklib.apb_pkg:sv.
+	First compiled from line 7 of /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_pkg.sv.
+	req = apb_item::type_id::create("req"); 
+	             |
+xmvlog: *W,NOUNAD (/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_sequence_lib.sv,75|14): This unadorned reference to a parameterized class (apb_item) is not legal. A class specialization of '#()' is assumed.
+	rsp = apb_item::type_id::create("rsp");
+	             |
+xmvlog: *W,NOUNAD (/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_sequence_lib.sv,76|14): This unadorned reference to a parameterized class (apb_item) is not legal. A class specialization of '#()' is assumed.
+	package worklib.apb_pkg:sv
+		errors: 0, warnings: 3
+    $value$plusargs("VERBOSITY=%s", verbosity);
+                  |
+xmvlog: *W,NOSYST (/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/tests/apb_base_test.sv,77|18): System function '$value$plusargs' invoked as a task. Return value will be ignored.
+    $value$plusargs("VERBOSITY=%s", verbosity);
+                  |
+xmvlog: *W,NOSYST (/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/tests/apb_base_sqr_test.sv,76|18): System function '$value$plusargs' invoked as a task. Return value will be ignored.
+     function  apb_random_test::new(string name = "apb_random_test", uvm_component parent);
+                                              |
+xmvlog: *W,PMBDVI (/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/tests/apb_random_test.sv,13|46): Out of block declaration default argument value was not in prototype, and is ignored.
+     function  apb_emptread_test::new(string name = "apb_emptread_test", uvm_component parent);
+                                                |
+xmvlog: *W,PMBDVI (/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/tests/apb_emptread_test.sv,13|48): Out of block declaration default argument value was not in prototype, and is ignored.
+     function  apb_error_test::new(string name = "apb_error_test", uvm_component parent);
+                                             |
+xmvlog: *W,PMBDVI (/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/tests/apb_error_test.sv,13|45): Out of block declaration default argument value was not in prototype, and is ignored.
+package apb_env_pkg;
+                  |
+xmvlog: *W,TSNSPK (/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env/apb_env_pkg.sv,5|18): `timescale is not specified for the package.  The default timescale of 1ns/1ns will be assumed for this package.
+    sb = apb_sb::type_id::create("sb",this);
+              |
+xmvlog: *W,NOUNAD (/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env/apb_env.sv,43|14): This unadorned reference to a parameterized class (apb_sb) is not legal. A class specialization of '#()' is assumed.
+	package worklib.apb_env_pkg:sv
+		errors: 0, warnings: 7
+file: /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/tb/top.sv
+package apb_pkg;
+              |
+xmvlog: *W,RECOME (/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_pkg.sv,7|14): recompiling design unit worklib.apb_pkg:sv.
+	First compiled from line 7 of /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_pkg.sv.
+	req = apb_item::type_id::create("req"); 
+	             |
+xmvlog: *W,NOUNAD (/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_sequence_lib.sv,75|14): This unadorned reference to a parameterized class (apb_item) is not legal. A class specialization of '#()' is assumed.
+	rsp = apb_item::type_id::create("rsp");
+	             |
+xmvlog: *W,NOUNAD (/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_sequence_lib.sv,76|14): This unadorned reference to a parameterized class (apb_item) is not legal. A class specialization of '#()' is assumed.
+	package worklib.apb_pkg:sv
+		errors: 0, warnings: 3
+package apb_env_pkg;
+                  |
+xmvlog: *W,RECOME (/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env/apb_env_pkg.sv,5|18): recompiling design unit worklib.apb_env_pkg:sv.
+	First compiled from line 5 of /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env/apb_env_pkg.sv.
+    $value$plusargs("VERBOSITY=%s", verbosity);
+                  |
+xmvlog: *W,NOSYST (/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/tests/apb_base_test.sv,77|18): System function '$value$plusargs' invoked as a task. Return value will be ignored.
+    $value$plusargs("VERBOSITY=%s", verbosity);
+                  |
+xmvlog: *W,NOSYST (/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/tests/apb_base_sqr_test.sv,76|18): System function '$value$plusargs' invoked as a task. Return value will be ignored.
+     function  apb_random_test::new(string name = "apb_random_test", uvm_component parent);
+                                              |
+xmvlog: *W,PMBDVI (/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/tests/apb_random_test.sv,13|46): Out of block declaration default argument value was not in prototype, and is ignored.
+     function  apb_emptread_test::new(string name = "apb_emptread_test", uvm_component parent);
+                                                |
+xmvlog: *W,PMBDVI (/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/tests/apb_emptread_test.sv,13|48): Out of block declaration default argument value was not in prototype, and is ignored.
+     function  apb_error_test::new(string name = "apb_error_test", uvm_component parent);
+                                             |
+xmvlog: *W,PMBDVI (/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/tests/apb_error_test.sv,13|45): Out of block declaration default argument value was not in prototype, and is ignored.
+package apb_env_pkg;
+                  |
+xmvlog: *W,TSNSPK (/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env/apb_env_pkg.sv,5|18): `timescale is not specified for the package.  The default timescale of 1ns/1ns will be assumed for this package.
+    sb = apb_sb::type_id::create("sb",this);
+              |
+xmvlog: *W,NOUNAD (/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env/apb_env.sv,43|14): This unadorned reference to a parameterized class (apb_sb) is not legal. A class specialization of '#()' is assumed.
+	package worklib.apb_env_pkg:sv
+		errors: 0, warnings: 8
+        $value$plusargs("DUMPNAME=%s", logfile);
+                      |
+xmvlog: *W,NOSYST (/space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/tb/top.sv,45|22): System function '$value$plusargs' invoked as a task. Return value will be ignored.
+	module worklib.top:sv
+		errors: 0, warnings: 1
+xmvlog: *W,SPDUSD: Include directory /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc given but not used.
+xmvlog: *W,SPDUSD: Include directory /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/tb given but not used.
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 2
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		uvm_pkg
+		cdns_uvmapi
+		cdns_assert2uvm_pkg
+		cdns_uvm_pkg
+		apb_pkg
+		apb_env_pkg
+		top
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.top:sv <0x76e66cbb>
+			streams: 570, words: 791967
+		worklib.uvm_pkg:sv <0x22512c2e>
+			streams:  24, words: 32642
+		worklib.uvm_pkg:sv <0x58322f71>
+			streams:  24, words: 18410
+		worklib.apb_pkg:sv <0x5ee98118>
+			streams: 535, words: 755042
+		worklib.cdns_uvm_pkg:sv <0x11701445>
+			streams: 237, words: 381370
+		worklib.cdns_uvmapi:svp <0x23593652>
+			streams:  27, words: 29972
+		worklib.cdns_assert2uvm_pkg:sv <0x7ef5ecd9>
+			streams:   3, words:  1818
+		worklib.uvm_pkg:sv <0x534e305c>
+			streams: 5293, words: 8232613
+		worklib.apb_if:sv <0x6efb5c85>
+			streams:  21, words: 17162
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                       Instances  Unique
+		Modules:                       1       1
+		Interfaces:                    1       1
+		Verilog packages:              6       6
+		Registers:                 17751   12131
+		Scalar wires:                  2       -
+		Named events:                  4      12
+		Always blocks:                12      12
+		Initial blocks:              396     192
+		Clocking blocks:               1       1
+		Clocking items:                3       3
+		Parallel blocks:              35      36
+		Pseudo assignments:            2       2
+		Assertions:                    8       8
+		Covergroup Instances:          0       2
+		SV Class declarations:       253     369
+		SV Class specializations:    488     488
+		Simulation timescale:        1ns
+	Writing initial simulation snapshot: worklib.top:sv
+Loading snapshot worklib.top:sv .................... Done
+SVSEED set from command line: 1
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+xcelium> source /tools/cdnc/xcelium/current/tools/xcelium/files/xmsimrc
+xcelium> source /tools/cdnc/xcelium/current/tools/methodology/UVM/CDNS-1.2/additions/sv/files/tcl/uvm_sim.tcl
+xcelium> run
+UVM_INFO /tools/cdnc/xcelium/current/tools/methodology/UVM/CDNS-1.2/sv/src/base/uvm_root.svh(412) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+CDNS-UVM-1.2 (22.03-s002)
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO @ 0: reporter [RNTST] Running test apb_base_test...
+xmsim: *W,PRPASZ: Packed array at "worklib.uvm_pkg::uvm_string_to_bits.uvm_string_to_bits" of 115200 bits exceeds limit of 4096 - not probed
+ Use 'probe -create -packed 115200 worklib.uvm_pkg::uvm_string_to_bits.uvm_string_to_bits' or 'setenv SHM_PACKED_LIMIT 115200' to adjust limit.
+xmsim: *W,PRPASZ: Packed array at "worklib.uvm_pkg::uvm_bits_to_string.str" of 115200 bits exceeds limit of 4096 - not probed
+ Use 'probe -create -packed 115200 worklib.uvm_pkg::uvm_bits_to_string.str' or 'setenv SHM_PACKED_LIMIT 115200' to adjust limit.
+xmsim: *W,PRPASZ: Packed array at "worklib.cdns_uvm_pkg::_temp" of 115200 bits exceeds limit of 4096 - not probed
+ Use 'probe -create -packed 115200 worklib.cdns_uvm_pkg::_temp' or 'setenv SHM_PACKED_LIMIT 115200' to adjust limit.
+xmsim: *W,PRPASZ: Packed array at "worklib.cdns_uvm_pkg::_temp2" of 115200 bits exceeds limit of 4096 - not probed
+ Use 'probe -create -packed 115200 worklib.cdns_uvm_pkg::_temp2' or 'setenv SHM_PACKED_LIMIT 115200' to adjust limit.
+UVM_INFO @ 0: reporter [MAXQUITSET] '+UVM_MAX_QUIT_COUNT=1' provided on the command line is being applied.
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/tests/apb_base_test.sv(34) @ 0: uvm_test_top [build_phase] Enviroment created.
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/tests/apb_base_test.sv(63) @ 0: uvm_test_top [config] Default configuration set.
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_agent.sv(26) @ 0: uvm_test_top.env.master_agent [apb_agent] apb UVC
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_agent.sv(26) @ 0: uvm_test_top.env.slave_agent [apb_agent] apb UVC
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_agent.sv(37) @ 0: uvm_test_top.env.master_agent [build_phase_apb_agent] apb_if was set through config db
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_agent.sv(39) @ 0: uvm_test_top.env.master_agent [AGENT] cfg.agent_type = 0
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_agent.sv(44) @ 0: uvm_test_top.env.master_agent [build_phase_master_agent] Master driver and sequencer created.
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_master_driver.sv(27) @ 0: uvm_test_top.env.master_agent.m_drv [build_phase] BUILD apb_MASTER_DRIVER
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_monitor.sv(38) @ 0: uvm_test_top.env.master_agent.m_mon [build_phase] BUILD apb_MONITOR
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_master_sequencer.sv(26) @ 0: uvm_test_top.env.master_agent.m_seqr [build_phase] CFG is set through config db
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_agent.sv(37) @ 0: uvm_test_top.env.slave_agent [build_phase_apb_agent] apb_if was set through config db
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_agent.sv(39) @ 0: uvm_test_top.env.slave_agent [AGENT] cfg.agent_type = 1
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_agent.sv(49) @ 0: uvm_test_top.env.slave_agent [build_phase_master_agent] Slave driver and sequencer created.
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_monitor.sv(38) @ 0: uvm_test_top.env.slave_agent.m_mon [build_phase] BUILD apb_MONITOR
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/slave_empty_driver.sv(28) @ 0: uvm_test_top.env.slave_agent.s_drv [build_phase] BUILD apb_slave_DRIVER
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_slave_sequencer.sv(25) @ 0: uvm_test_top.env.slave_agent.s_seqr [build_phase] CFG is set through config db
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_agent.sv(59) @ 0: uvm_test_top.env.master_agent [connect_phase_apb_agent] master driver connected.
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_agent.sv(63) @ 0: uvm_test_top.env.slave_agent [connect_phase_apb_agent] slave driver connected.
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/tests/apb_base_test.sv(73) @ 0: uvm_test_top [start_of_simulation_phase] Printing topology
+UVM_INFO /tools/cdnc/xcelium/current/tools/methodology/UVM/CDNS-1.2/sv/src/base/uvm_root.svh(605) @ 0: reporter [UVMTOP] UVM testbench topology:
+--------------------------------------------------------------------------
+Name                           Type                            Size  Value
+--------------------------------------------------------------------------
+uvm_test_top                   apb_base_test                   -     @2007
+  env                          uvm_env                         -     @2082
+    master_agent               apb_agent#(ADDR,DATA)           -     @2148
+      m_drv                    apb_master_driver#(ADDR,DATA)   -     @2911
+        rsp_port               uvm_analysis_port               -     @3019
+        seq_item_port          uvm_seq_item_pull_port          -     @2967
+      m_mon                    apb_monitor#(ADDR,DATA)         -     @2216
+        apb_mon_analysis_port  uvm_analysis_port               -     @3780
+        cov                    apb_coverage                    -     @3754
+      m_seqr                   apb_master_sequencer            -     @3052
+        rsp_export             uvm_analysis_export             -     @3111
+        seq_item_export        uvm_seq_item_pull_imp           -     @3671
+        arbitration_queue      array                           0     -    
+        lock_queue             array                           0     -    
+        num_last_reqs          integral                        32    'd1  
+        num_last_rsps          integral                        32    'd1  
+    sb                         apb_sb                          -     @2872
+      m_mon_imp                uvm_analysis_imp_m_mon          -     @3891
+      s_mon_imp                uvm_analysis_imp_s_mon          -     @3941
+    sequencer                  virtual_sequencer               -     @2187
+      rsp_export               uvm_analysis_export             -     @2277
+      seq_item_export          uvm_seq_item_pull_imp           -     @2839
+      arbitration_queue        array                           0     -    
+      lock_queue               array                           0     -    
+      num_last_reqs            integral                        32    'd1  
+      num_last_rsps            integral                        32    'd1  
+    slave_agent                apb_agent#(ADDR,DATA)           -     @2123
+      m_mon                    apb_monitor#(ADDR,DATA)         -     @3858
+        apb_mon_analysis_port  uvm_analysis_port               -     @4822
+        cov                    apb_coverage                    -     @4853
+      s_drv                    slave_empty_driver#(ADDR,DATA)  -     @3991
+        rsp_port               uvm_analysis_port               -     @4090
+        seq_item_port          uvm_seq_item_pull_port          -     @4041
+      s_seqr                   apb_slave_sequencer             -     @4121
+        rsp_export             uvm_analysis_export             -     @4179
+        seq_item_export        uvm_seq_item_pull_imp           -     @4731
+        arbitration_queue      array                           0     -    
+        lock_queue             array                           0     -    
+        num_last_reqs          integral                        32    'd1  
+        num_last_rsps          integral                        32    'd1  
+--------------------------------------------------------------------------
+
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/tests/apb_base_test.sv(78) @ 0: uvm_test_top [start_of_simulation_phase] Verbosity is set to UVM_LOW.
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env/apb_scoreboard.sv(56) @ 0: uvm_test_top.env.sb [SCOREBOARD] run task, for reset
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/env/apb_scoreboard.sv(62) @ 0: uvm_test_top.env.sb [SCOREBOARD] run task
+UVM_INFO /space/users/jelenar/BGFFIFO/uvc_template_generator/apb_uvc/uvc/apb_agent.sv(70) @ 0: uvm_test_top.env.master_agent [poruka] lebac
+UVM_INFO /tools/cdnc/xcelium/current/tools/methodology/UVM/CDNS-1.2/sv/src/base/uvm_report_catcher.svh(705) @ 0: reporter [UVM/REPORT/CATCHER] 
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+
+UVM_INFO /tools/cdnc/xcelium/current/tools/methodology/UVM/CDNS-1.2/sv/src/base/uvm_report_server.svh(847) @ 0: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+Quit count :     0 of  1000
+** Report counts by severity
+UVM_INFO :   28
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[AGENT]     2
+[MAXQUITSET]     1
+[RNTST]     1
+[SCOREBOARD]     2
+[UVM/RELNOTES]     1
+[UVM/REPORT/CATCHER]     1
+[UVMTOP]     1
+[apb_agent]     2
+[build_phase]     7
+[build_phase_apb_agent]     2
+[build_phase_master_agent]     2
+[config]     1
+[connect_phase_apb_agent]     2
+[poruka]     1
+[start_of_simulation_phase]     2
+
+Simulation complete via $finish(1) at time 0 FS + 231
+/tools/cdnc/xcelium/current/tools/methodology/UVM/CDNS-1.2/sv/src/base/uvm_root.svh:543     $finish;
+xcelium> exit
+TOOL:	xrun(64)	22.03-s002: Exiting on Mar 28, 2024 at 10:45:22 UTC  (total: 00:00:07)
