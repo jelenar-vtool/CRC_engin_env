@@ -11,7 +11,7 @@ class apb_cfg extends uvm_object;
     rand bit ready_high;
 //  Enables coverage  
     rand bit has_coverage;
-    rand agent_type_enum agent_type; // master (0) or slave (1)
+    rand agent_type_enum1 agent_type; // master (0) or slave (1)
 
 
 //  Simulation timeout

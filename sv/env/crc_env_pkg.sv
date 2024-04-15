@@ -9,6 +9,6 @@ package crc_env_pkg;
    `include "crc_virtual_sequence.sv"
    `include "crc_scoreboard.sv"
    `include "crc_env.sv"
-	
+   `include "../tests/crc_base_test.sv"
 endpackage 
 

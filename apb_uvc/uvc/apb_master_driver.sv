@@ -3,7 +3,7 @@ class apb_master_driver#(int ADDR = 32, int DATA = 32) extends uvm_driver #(apb_
     `uvm_component_utils(apb_master_driver#(ADDR,DATA))
     virtual apb_if#(ADDR, DATA)   apb_vif;
     apb_item req;
-    apb_cfg    cfg;
+    apb_cfg    apb1_cfg;
     bit reset_flag = 0;
     bit[DATA-1: 0] addr_q[$];	
     extern function new (string name, uvm_component parent);
@@ -27,7 +27,7 @@ function void apb_master_driver::build_phase(uvm_phase phase);
     `uvm_info("build_phase","BUILD apb_MASTER_DRIVER",UVM_HIGH);
     if(!uvm_config_db#(virtual apb_if#(ADDR, DATA))::get(this, "", "apb_vif", apb_vif)) 
         `uvm_fatal("build_phase",{"virtual interface must be set for: ", get_full_name(),".apb_vif"});
-    if (!uvm_config_db#(apb_cfg)::get(this, "", "cfg", cfg)) begin
+    if (!uvm_config_db#(apb_cfg)::get(this, "", "apb1_cfg", apb1_cfg)) begin
         `uvm_fatal("build_phase", "cfg wasn't set through config db");
     end
 endfunction // apb_master_driver::build_phase
@@ -70,7 +70,7 @@ task apb_master_driver::do_init();
 // * * * Write initial values for your signals here * * *
         apb_vif.psel=0;
 	apb_vif.penable=0;
-	apb_vif.pready=0;
+	apb_vif.pready=1;
 	apb_vif.pwrite=0;
 	apb_vif.pprot=0;
 	apb_vif.pslverr=0;
@@ -109,6 +109,7 @@ task apb_master_driver::write_trans();
 	apb_vif.paddr<=req.addr;
 	apb_vif.pprot<=req.pprot;
 	apb_vif.pstrobe<=req.pstrobe;
+
 		`uvm_info("master", $sformatf("paddr = %h", apb_vif.paddr), UVM_LOW) 
 		`uvm_info("smaster", $sformatf("pwdata = %h", apb_vif.pwdata), UVM_LOW) 
 	    @(posedge apb_vif.system_clock );  
@@ -132,6 +133,7 @@ task apb_master_driver::read_trans();
         apb_vif.pwrite<=req.pwrite;
 	apb_vif.pprot<=req.pprot;
 	apb_vif.pstrobe<=req.pstrobe;  //read transaction
+
 	    @(posedge apb_vif.system_clock ); 
 	    	apb_vif.penable<=1;
 

@@ -5,7 +5,7 @@ class apb_master_sequencer extends uvm_sequencer #(apb_item);
 
    `uvm_component_utils(apb_master_sequencer)
 
-    apb_cfg cfg;
+    apb_cfg apb1_cfg;
 
     extern function new (string name, uvm_component parent);
     extern function void build_phase (uvm_phase phase);
@@ -19,7 +19,7 @@ endfunction
 //-------------------------------------------------------------------------------------------------------------
 function void apb_master_sequencer::build_phase(uvm_phase phase);
     super.build_phase(phase);
-    if (!uvm_config_db#(apb_cfg )::get(this, "", "cfg", cfg)) begin
+    if (!uvm_config_db#(apb_cfg )::get(this, "", "apb1_cfg", apb1_cfg)) begin
         `uvm_info("build_phase", "CFG is not set through config db", UVM_LOW);    
     end 
     else begin

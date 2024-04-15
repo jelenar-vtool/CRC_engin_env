@@ -30,7 +30,7 @@ function void vr_agent::build_phase(uvm_phase phase);
     
     super.build_phase(phase);
 
-    if (!uvm_config_db#(virtual vr_if#(DATA))::get(this, "*", "vr_vif", vr_vif)) begin
+    if (!uvm_config_db#(virtual vr_if#(DATA))::get(this, "", "vr_vif", vr_vif)) begin
         `uvm_fatal("build_phase_vr_agent", "interface was not set");
     end else 
         `uvm_info("build_phase_vr_agent", "vr_if was set through config db", UVM_LOW); 

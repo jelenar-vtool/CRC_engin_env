@@ -3,7 +3,8 @@ ${labs_home}/rtl/design.sv
 
 +incdir+${work_area}/sv/uvc
 
-${work_area}/sv/uvc/crc_if.sv
+${work_area}/vr_uvc/uvc/vr_if.sv
+${work_area}/apb_uvc/uvc/apb_if.sv
 +incdir+${work_area}/sv/sequences
 
 

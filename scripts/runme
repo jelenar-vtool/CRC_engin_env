@@ -99,6 +99,8 @@ echo "${sim_runner} -clean -timescale 1ns/1ns -64bit ${coverage} -sysv ${gui} -a
     ${gui} \
     -l ${testname} \
     -f ${filelist_path} \
+	-nowarn ICDCBAW \
+	-warn_multiple_driver \
     +UVM_TESTNAME=$testname \
 	+UVM_VERBOSITY=${verbosity} \
 	+UVM_MAX_QUIT_COUNT=${quitcount}\

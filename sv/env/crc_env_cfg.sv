@@ -3,7 +3,7 @@ class crc_env_cfg extends uvm_object;
     
     vr_cfg slave_config;
     vr_cfg master_config;  
-    apb_cfg  apb_cfg;  
+    apb_cfg  apb_master_cfg;  
     int has_master_agent;
     int has_slave_agent;
     
@@ -13,7 +13,7 @@ class crc_env_cfg extends uvm_object;
 
         `uvm_field_object(master_config, UVM_ALL_ON)
         `uvm_field_object(slave_config, UVM_ALL_ON)
-        `uvm_field_object(apb_cfg, UVM_ALL_ON)
+        `uvm_field_object(apb_master_cfg, UVM_ALL_ON)
         `uvm_field_int(has_master_agent, UVM_ALL_ON )
         `uvm_field_int(has_slave_agent, UVM_ALL_ON)      
     `uvm_object_utils_end
@@ -23,7 +23,7 @@ function crc_env_cfg::new(string name = "crc_env_cfg");
     super.new(name);
     master_config = vr_cfg::type_id::create ("master_config");
     slave_config = vr_cfg::type_id::create ("slave_config");
-    apb_cfg = apb_cfg::type_id::create ("apb_cfg");
+    apb_master_cfg = apb_cfg::type_id::create ("apb_master_cfg");
 endfunction
 
 //-------------------------------------------------------------------------------------------------------------

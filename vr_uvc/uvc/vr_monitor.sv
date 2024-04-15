@@ -4,11 +4,11 @@ class vr_monitor#(int DATA = 32) extends uvm_monitor;
    `uvm_component_utils(vr_monitor#(DATA))
 
     virtual vr_if#(DATA) vr_vif;
-    vr_item   req;
+    vr_item#(DATA)   req;
     vr_cfg         cfg;
     int counter;
-    uvm_analysis_port#(vr_item)   vr_mon_analysis_port;
-    uvm_analysis_port #(vr_item)   vr_s_analysis_port;
+    uvm_analysis_port #(vr_item#(DATA))   vr_mon_analysis_port;
+    uvm_analysis_port #(vr_item#(DATA))   vr_s_analysis_port;
     bit reset_flag = 0;
     
     extern function new (string name, uvm_component parent);
@@ -38,7 +38,7 @@ function void vr_monitor::build_phase(uvm_phase phase);
     end
 
     vr_mon_analysis_port = new("vr_mon_analysis_port",this);  
-
+    vr_s_analysis_port = new("vr_s_analysis_port",this);  
 
     if (!cfg.has_checks)   
         `uvm_info("build_phase","CHECKERS DISABLED",UVM_LOW);
@@ -88,8 +88,8 @@ task vr_monitor::do_monitor();
 
 
     `uvm_info("Monitor", "do_monitor task executed", UVM_LOW)
-
+	//TO BE ADDED SENDING TO SCOREBOARD
     vr_mon_analysis_port.write(req); // sending sampled data to scoreboard
-
+    vr_s_analysis_port.write(req);
 
 endtask

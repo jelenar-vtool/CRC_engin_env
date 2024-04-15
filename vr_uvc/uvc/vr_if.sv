@@ -11,7 +11,7 @@ interface vr_if #(parameter DATA=32)(input bit clk, input bit reset_n);
 	 	@(posedge clk) disable iff(!reset_n)
     	$rose(ready) |-> ##2 $fell(valid) ;
 
-		endproperty 
+	endproperty 
 
      	assert property  (end_of_trans);
 clocking m_ckb @(posedge clk);
@@ -25,8 +25,8 @@ clocking s_ckb @(posedge clk);
 	input valid, data;
 endclocking 
 clocking mon_ckb @(posedge clk);
-	//default input #1ns output #2ns; //ovo mi je za monitor to cu sytra 
+	//default input #1ns output #2ns; 
 
-	output valid, data, ready;
+	input valid, data, ready;
 endclocking 
 endinterface

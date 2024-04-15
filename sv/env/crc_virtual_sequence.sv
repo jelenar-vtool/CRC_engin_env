@@ -3,8 +3,10 @@ class crc_virtual_sequence extends uvm_sequence #(uvm_sequence_item);
     `uvm_object_utils(crc_virtual_sequence)
    `uvm_declare_p_sequencer(crc_virtual_sequencer)
 
-   crc_master_sequence seq1;
- 
+
+    vr_master_sequence seq1;
+    vr_slave_sequence 	seq2;
+    apb_master_sequence seq3;
     extern function new(string name = "crc_virtual_sequence");
     extern virtual task pre_body();
     extern virtual task body();   
@@ -29,7 +31,8 @@ task crc_virtual_sequence::body();
 	  
 	
 	`uvm_do_on(seq1, p_sequencer.seqr1) 
-	 
+	`uvm_do_on(seq2, p_sequencer.seqr2) 
+	`uvm_do_on(seq3, p_sequencer.seqr3) 	 
 
 	  
 	join_any
